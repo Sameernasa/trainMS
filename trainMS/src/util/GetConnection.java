@@ -1,8 +1,8 @@
 package util;
 import java.sql.*;
 public class GetConnection {
-public static Connection con;
-public static Connection getDBConnection(){
+public  Connection con;
+public  Connection getDBConnection(){
 	try
 	  {
 	   Class.forName("oracle.jdbc.driver.OracleDriver");
