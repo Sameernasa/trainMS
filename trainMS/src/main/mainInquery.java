@@ -18,9 +18,26 @@ protected void doPost(HttpServletRequest req,HttpServletResponse res)throws Serv
 		
 		pnrStatus pnrObj=serviceObj.pnr(Long.parseLong(req.getParameter("pnrNo")));
 		if(pnrObj!=null) {
-		System.out.print(pnrObj.pnr);}
-		  RequestDispatcher rd=req.getRequestDispatcher("pnrStatus.jsp");
-		  rd.forward(req, res);
+			req.setAttribute("sts","found");
+			System.out.print(pnrObj.pnr);
+			req.setAttribute("pnr",pnrObj.pnr);
+			req.setAttribute("p_name",pnrObj.p_name);
+			req.setAttribute("age",pnrObj.age);
+			req.setAttribute("seat_no",pnrObj.seat_no);
+			req.setAttribute("train_id",pnrObj.train_id);
+			req.setAttribute("u_id",pnrObj.u_id);
+			req.setAttribute("reserve_status",pnrObj.reserve_status);
+			req.setAttribute("gender",pnrObj.gender);
+			req.getRequestDispatcher("pnrStatus.jsp").forward(req, res);
+		}
+		else {
+			req.setAttribute("sts","not found");
+			req.setAttribute("print","Enter a valid pnr no.");
+			req.getRequestDispatcher("pnrStatus.jsp").forward(req, res);
+		}
+		
+		  
+		  
 	}
 		
 	}
