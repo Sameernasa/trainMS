@@ -2,17 +2,18 @@
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
 <servlet>
-	<servlet-name>connection</servlet-name>
-	<servlet-class>util.GetConnection0</servlet-class>
+	<servlet-name>Main</servlet-name>
+	<servlet-class>main.mainInquery</servlet-class>
 </servlet>
 <servlet-mapping>
-	<servlet-name>connection</servlet-name>
-	<url-pattern>/config</url-pattern>
+	<servlet-name>Main</servlet-name>
+	<url-pattern>/Mainservlet</url-pattern>
 </servlet-mapping>
 <welcome-file-list>
 	<welcome-file>login.jsp</welcome-file>
 	<welcome-file>signup.jsp</welcome-file>
 	<welcome-file>home.jsp</welcome-file>
 	<welcome-file>login.jsp</welcome-file>
+	<welcome-file>pnrStatus.jsp</welcome-file>
 </welcome-file-list>
 </web-app>

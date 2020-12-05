@@ -29,7 +29,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="home.jsp">Home </a></li>
         <li><a href="#">PNR Status</a></li>
         <li><a href="#">Live Station</a></li>
         <li><a href="#">Train Between Stations</a></li>

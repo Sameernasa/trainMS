@@ -18,11 +18,15 @@ public class service {
 			ps.setLong(1, no);
 			ResultSet rs=ps.executeQuery();
 			pnrStatus pnrObj=null;
-			while(rs.next())
+			if(rs.next())
 			{	
 				pnrObj=new pnrStatus(rs.getLong(1),rs.getString(2),rs.getInt(3),rs.getString(4),rs.getInt(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getLong(9));
 			System.out.println("pnr found");
 			}
+			else {
+				System.out.println("not found");
+			}
+			
 			return pnrObj;
 		}catch(Exception e) {
 			System.out.println("Error in pnr function service class");
