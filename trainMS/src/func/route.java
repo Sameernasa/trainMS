@@ -1,9 +1,10 @@
 package func;
 
 public class route {
-	long train_id;
-	int stop_no;
-	String arr_time, dept_time,station_id;
+	public long train_id;
+	public int stop_no;
+	public String arr_time, dept_time,station_id;
+	public route() {}
 	public route(long train_id,String station_id,int stop_no,String arr_time,String dept_time) {
 		this.station_id=station_id;
 		this.arr_time=arr_time;

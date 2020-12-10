@@ -15,5 +15,7 @@
 	<welcome-file>home.jsp</welcome-file>
 	<welcome-file>login.jsp</welcome-file>
 	<welcome-file>pnrStatus.jsp</welcome-file>
+	<welcome-file>trainBWStation.jsp</welcome-file>
+	<welcome-file>trainSchedule.jsp</welcome-file>
 </welcome-file-list>
 </web-app>
